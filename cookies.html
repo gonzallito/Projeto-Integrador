@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coockie Consent</title>
+  <link rel="stylesheet" href="cookies.css">
+  <script defer src="cookies.js"></script>
+</head>
+<body>
+  <button data-modal-target="#modal">COOKIES</button>
+
+    <div class="modal" id="modal">
+    
+      <form>
+
+        <div class="title">Cookie Consent</div>
+
+        <div class="topics">
+          <div>Consent</div>
+          <div>Details</div>
+          <div>About</div>
+        </div>
+
+        <p>Please select which types of cookies you want to allow:</p>
+        <label>
+          <input type="checkbox" name="strictly-necessary" checked>
+          Strictly Necessary Cookies
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="preferences" checked>
+          Preferences Cookies
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="statistics" checked>
+          Statistics CookiesMarketing cookies 
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="marketing" checked>
+          Marketing Cookies
+        </label>
+        <br>
+        <button type="button" onclick="savePreferences()">Use necessary cookies only</button>
+        <button type="button" onclick="savePreferences()">Allow all cookies</button>
+      </form>
+
+    </div>
+    <div id="overlay"></div>
+
+
+
+    <script>
+      function savePreferences() {
+        var preferences = {
+          strictlyNecessary: document.getElementsByName('strictly-necessary')[0].checked,
+          preferences: document.getElementsByName('preferences')[0].checked,
+          statistics: document.getElementsByName('statistics')[0].checked,
+          marketing: document.getElementsByName('marketing')[0].checked,
+        };
+        document.cookie = 'preferences=' + JSON.stringify(preferences);
+        alert('Your preferences have been saved.');
+      }
+    </script>
+</body>
+</html>
