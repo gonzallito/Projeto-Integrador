@@ -17,7 +17,7 @@
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    width: 500px;
+    width: 800px;
     max-width: 80%;
     transition: 200ms ease-in-out;
 }
@@ -33,7 +33,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     pointer-events: none;
     transition: 200ms ease-in-out;
 
@@ -50,14 +50,35 @@
 
 /* POP UP DESIGN */
 
-
-
-
 .title {
-    font-size: 10px;
+    font-size: 20px;
+    padding: 30px;
+    border-bottom: 1px gray solid;
+    font-weight: bold;
 }
 
 .topics {
+    font-size: 18px;
     display: flex;
     justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px gray solid;
+}
+
+.preferences {
+    padding: 50px 50px 0px;
+}
+
+.toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons {
+    padding: 50px;
+}
+
+.buttons button {
+    font-size: 20px;
 }
